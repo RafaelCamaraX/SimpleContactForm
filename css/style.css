@@ -1,0 +1,89 @@
+:root {
+  --bg-color: #27282d;
+  --text-color: white;
+  --border-color: #ccc;
+  --error-color: red;
+  --hover-bg: #333;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.form {
+  text-align: center;
+  padding: 20px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.form img {
+  max-width: 100%;
+}
+
+.form legend,
+.form label {
+  color: #ccc;
+}
+
+.form input[type="text"],
+.form input[type="email"],
+.form textarea,
+.form input[type="submit"] {
+  padding: 10px;
+  display: block;
+  border-radius: 20px;
+  margin: 10px auto;
+  font-size: 16px;
+  width: calc(100% - 20px);
+  border: 1px solid var(--border-color);
+}
+
+.form input[type="text"]:focus,
+.form input[type="email"]:focus,
+.form textarea:focus {
+  outline: 2px solid var(--text-color);
+  box-shadow: 0 0 5px var(--text-color);
+}
+
+.form textarea {
+  resize: vertical;
+  height: 120px;
+}
+
+.form input[type="submit"] {
+  cursor: pointer;
+  color: var(--text-color);
+  background-color: black;
+  height: 35px;
+  border: 0;
+  transition: background-color 0.3s ease;
+}
+
+.form input[type="submit"]:hover {
+  background-color: var(--hover-bg);
+}
+
+.error {
+  color: var(--error-color);
+  font-size: 14px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+  .form {
+    padding: 10px;
+  }
+}
